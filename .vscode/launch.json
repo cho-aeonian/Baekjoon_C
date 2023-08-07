@@ -1,0 +1,89 @@
+{
+  "version": "2.0.0",
+  "runner": "terminal",
+  "type": "shell",
+  "echoCommand": true,
+  "presentation": {
+    "reveal": "always"
+  },
+  "tasks": [
+    {
+      "label": "save and compile for C++",
+      "command": "g++",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "problemMatcher": {
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    },
+    {
+      "label": "save and compile for C",
+      "command": "gcc",
+      "args": [
+        "${file}",
+        "-o",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": "build",
+      "problemMatcher": {
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "severity": 4,
+          "message": 5
+        }
+      }
+    },
+    {
+      "label": "execute",
+      "command": "cmd",
+      "group": "test",
+      "args": [
+        "/C",
+        "${fileDirname}\\${fileBasenameNoExtension}"
+      ]
+    }
+  ],
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "c:/Users/박초영/Desktop/Baekjoon",
+      "program": "c:/Users/박초영/Desktop/Baekjoon/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
