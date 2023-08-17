@@ -73,8 +73,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/박초영/Desktop/Baekjoon",
-      "program": "c:/Users/박초영/Desktop/Baekjoon/build/Debug/outDebug",
+      "cwd": "c:/Users/박초영/Desktop/Baekjoon/Baekjoon(c)",
+      "program": "c:/Users/박초영/Desktop/Baekjoon/Baekjoon(c)/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
